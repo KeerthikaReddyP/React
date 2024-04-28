@@ -4,7 +4,8 @@ const parent = React.createElement(
   React.createElement(
     "div",
     { id: "child" },
-    React.createElement("h1", {}, "Hiii")
+    [React.createElement("h1", {}, "Hiii"),
+    React.createElement("p", {}, "This is a pragraph, sibling of h1 tag's Hiii")]
   )
 );
 
