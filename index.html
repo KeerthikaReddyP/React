@@ -7,7 +7,15 @@
     <title>Namaste React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div>
+      <h2>Above the root</h2>
+    </div>
+    <div id="root">
+      <h2>Something</h2> <!-- This h2 will be replaced by parent from react. -->
+    </div>
+    <div>
+      <h2>Below the root</h2>
+    </div>
     
     <script
       crossorigin
