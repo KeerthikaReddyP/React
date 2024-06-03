@@ -1,19 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//React Element
-const heading = (
+const Title = () => (
   <h1 id="heading" className="head">
-    Namaste React from JSX🚀 
+    Namaste React from JSX🚀
   </h1>
 );
 
-//React Functional Component
-const HeadingCOmponent=()=>{
-  return <h1>Namaste React from Functional Component</h1>;
-};
-
+//Component Composition (Rendering component inside another component)
+const HeadingCOmponent = () => (
+  <div>
+    <Title />
+    <h1>Namaste React from Functional Component</h1>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading); //For react elements
-root.render(<HeadingCOmponent />); //For functional components
+root.render(<HeadingCOmponent />);
