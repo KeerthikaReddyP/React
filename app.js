@@ -15,26 +15,74 @@ import ReactDOM from "react-dom/client";
  *    address
  *    contact info
  */
-const Header=()=>{
-  return <div className="header">
-    <div className="logo-container">
-      <img className="logo" src="https://tse2.mm.bing.net/th?id=OIP.ONdI50AcLDXgcVOR9WLdhwHaHa&pid=Api&P=0&h=180" />
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://tse2.mm.bing.net/th?id=OIP.ONdI50AcLDXgcVOR9WLdhwHaHa&pid=Api&P=0&h=180"
+        />
+      </div>
+      <div className="navbar">
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Contact us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
-    <div className="navbar">
-      <ul>
-        <li>Home</li>
-        <li>About us</li>
-        <li>Contact us</li>
-        <li>Cart</li>
-      </ul>
+  );
+};
+
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <img
+        className="res-logo"
+        src="https://tse1.mm.bing.net/th?id=OIP._rTsdRFBYd_7RwuIpTgu9AHaE8&pid=Api&P=0&h=180"
+      />
+      <h2>Kalyani Mess</h2>
+      <h4>Biryani, Italian, North Indian</h4>
+      <h6>4.5/5</h6>
+      <h6>32 minutes</h6>
     </div>
-  </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
 };
 
 const AppComponent = () => {
   return (
     <div>
       <Header />
+      <Body />
     </div>
   );
 };
