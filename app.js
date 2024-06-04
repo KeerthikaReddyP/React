@@ -37,15 +37,17 @@ const Header = () => {
 };
 
 //props(JS Object)
-const RestaurantCard = (props) => {
+//We can also send {resName, cuisine} instead of props
+//This is known as Destructuring. (JS concept)
+const RestaurantCard = ({resName,cuisine}) => {
   return (
     <div className="res-card">
       <img
         className="res-logo"
         src="https://tse1.mm.bing.net/th?id=OIP._rTsdRFBYd_7RwuIpTgu9AHaE8&pid=Api&P=0&h=180"
       />
-      <h2>{props.resName}</h2>
-      <h4>{props.cuisine}</h4>
+      <h2>{resName}</h2>
+      <h4>{cuisine}</h4>
       <h6>4.5/5</h6>
       <h6>32 minutes</h6>
     </div>
