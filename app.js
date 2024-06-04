@@ -6,11 +6,13 @@ const Title = () => (
     Namaste React from JSX🚀
   </h1>
 );
+const number=1000;
 
-//Component Composition (Rendering component inside another component)
 const HeadingCOmponent = () => (
   <div>
-    <Title />
+    {number}
+    <h2>{100+200}</h2>
+    {console.log("Huhuuu")}
     <h1>Namaste React from Functional Component</h1>
   </div>
 );
