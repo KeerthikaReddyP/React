@@ -36,43 +36,31 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+//props(JS Object)
+const RestaurantCard = (props) => {
   return (
     <div className="res-card">
       <img
         className="res-logo"
         src="https://tse1.mm.bing.net/th?id=OIP._rTsdRFBYd_7RwuIpTgu9AHaE8&pid=Api&P=0&h=180"
       />
-      <h2>Kalyani Mess</h2>
-      <h4>Biryani, Italian, North Indian</h4>
+      <h2>{props.resName}</h2>
+      <h4>{props.cuisine}</h4>
       <h6>4.5/5</h6>
       <h6>32 minutes</h6>
     </div>
   );
 };
 
+//We can pass any number of props.
+//React will convert all of them into a single object and pass it to the component.
 const Body = () => {
   return (
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard resName="Meghana food" cuisine="Biryani, North Indian, chineese"/>
+        <RestaurantCard resName="KFC" cuisine="Burger, KFC Chicken"/>
       </div>
     </div>
   );
