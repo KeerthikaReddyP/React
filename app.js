@@ -1,18 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Title = () => (
+const title =(
   <h1 id="heading" className="head">
     Namaste React from JSX🚀
   </h1>
 );
-const number=1000;
 
+//React element inside Component
 const HeadingCOmponent = () => (
   <div>
-    {number}
-    <h2>{100+200}</h2>
-    {console.log("Huhuuu")}
+    {title}
     <h1>Namaste React from Functional Component</h1>
   </div>
 );
