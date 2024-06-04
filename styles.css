@@ -1,3 +1,22 @@
-#heading{
-    color: red;
+.header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
 }
