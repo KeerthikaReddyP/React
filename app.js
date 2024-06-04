@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+const elem=<span>React elememnt</span>;
+
+//React element inside a react element
 const title =(
   <h1 id="heading" className="head">
+    {elem}
     Namaste React from JSX🚀
   </h1>
 );
