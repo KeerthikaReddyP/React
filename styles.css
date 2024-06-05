@@ -35,9 +35,8 @@
 
 .res-card{
     width: 250px;
-    height: 350px;
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
 }
 .res-card:hover{
     border: 1px solid black;
@@ -45,4 +44,35 @@
 }
 .res-logo{
     width: 100%;
+    height: 50%;
+}
+.res-name{
+    font-weight: bold;
+    font-size: larger;
+    height: 10%;
+}
+.res-cuisines{
+    font-size: medium;
+    height: 10%;
+}
+.res-details > div{
+    display: inline;
+    padding: 5px;
+}
+.res-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:8%;
+}
+.res-details > div:first-child{
+    background-color: green;
+    margin: 5px;
+    color: white;
+    padding: 3px;
+}
+
+.res-name , .res-cuisines , .res-details{
+    padding: 7px;
+    margin:5px;
 }
