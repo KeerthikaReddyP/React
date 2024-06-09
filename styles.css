@@ -4,7 +4,6 @@
     justify-content: space-between;
     padding: 5px;
 }
-
 .logo{
     width: 120px;
     height: 120px;
@@ -75,4 +74,18 @@
 .res-name , .res-cuisines , .res-details{
     padding: 7px;
     margin:5px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+}
+.shimmer-card{
+    width: 250px;
+    height: 400px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f0f0f0;
 }
