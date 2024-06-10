@@ -34,6 +34,14 @@
     margin: 10px;
     padding: 5px;
 }
+.search-input{
+    margin: 10px 0px;
+    padding: 4px;
+}
+.input-btn{
+    margin: 5px;
+    padding: 5px;
+}
 
 .res-container{
     display: flex;
