@@ -20,16 +20,31 @@
     padding: 10px;
     margin: 10px;
     font-size: 20px;
-    text-decoration: none;
+    align-content: center;
 }
 .login-btn{
-    height: fit-content;
+    display: flex;
+    background-color: purple;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
     padding: 10px;
-    margin: 10px 0px;
-    font-size: 20px;
+    text-align: center;
     cursor: pointer;
+    height: fit-content;
+    align-self: center;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+a:hover{
+    font-size: 20px;
+}
 .search{
     margin: 10px;
     padding: 5px;
