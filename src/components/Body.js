@@ -18,11 +18,11 @@ const Body = () => {
     const jsonData = await data.json();
 
     setListOfRestaurants(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredList(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };

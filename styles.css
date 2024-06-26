@@ -122,3 +122,8 @@ a:hover{
     margin: 10px;
     background-color: #f0f0f0;
 }
+
+.user-div{
+    padding: 5px;
+    border: 1px solid black;
+}
