@@ -1,5 +1,6 @@
 import React from "react";
 import UserClass from "./UserCass";
+import User from "./User";
 
 
 class About extends React.Component{
@@ -19,6 +20,7 @@ class About extends React.Component{
                 <h1>About us</h1>
                 <h3>We are from namaste React webseries</h3>
                 <UserClass name={"Keerthika "} location={"Delhi"}/>
+                <User name={"Keerthika "} location={"Delhi"}/>
             </div>
         )
     }
