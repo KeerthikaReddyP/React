@@ -3,31 +3,30 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state={
-        count:0,
-        count2:2,
+    
+    this.state = {
+      userInfo: {
+        name: "Dummy",
+        location: "Dimmy",
+      },
     };
-    console.log(this.props.name+"Child Constructor");
+    // console.log(this.props.name+"Child Constructor");
   }
-  
-  componentDidMount(){
-    console.log(this.props.name+"Child componentDidMount");
+
+  async componentDidMount() {
+    // console.log(this.props.name+"Child componentDidMount");
+    const data = await fetch("https://api.github.com/users/KeerthikaReddyP");
+    const jsonData = await data.json();
+    this.setState({ userInfo: jsonData });
   }
 
   render() {
-    console.log(this.props.name+"Child Render");
-    const { name,location } = this.props;
-    const {count,count2}=this.state;
-
+    // console.log(this.props.name+"Child Render");
+    // const { name,location } = this.props;
+    const { name, location } = this.state.userInfo;
     return (
       <div className="user-div">
         <h2>Name : {name}</h2>
-        <h2>Count : {count}</h2>
-        <button onClick={()=>{
-            this.setState({
-                count:this.state.count+1,
-            });
-        }}>Count increase</button>
         <h3>Location : {location}</h3>
         <h4>Contact : IDHELSDJ</h4>
       </div>
