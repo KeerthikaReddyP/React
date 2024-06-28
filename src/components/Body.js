@@ -11,7 +11,6 @@ const Body = () => {
   const [filteredList, setFilteredList] = useState([]);
 
   const onlineStatus = useOnlineStatus();
-  console.log(onlineStatus);
 
   useEffect(() => {
     fetchData();
