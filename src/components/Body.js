@@ -30,15 +30,13 @@ const Body = () => {
     );
   };
 
-  
-  if (onlineStatus === false)
-    return <h1>Here's the dino game.Please play.</h1>;
+  if (onlineStatus === false) return <h1>Here's the dino game.Please play.</h1>;
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div>
-      <div className="p-1 flex justify-center">
+      <div className="p-1 m-4 flex justify-center">
         <input
           className="border border-black m-2 p-1"
           placeholder="Search here..."
@@ -60,7 +58,7 @@ const Body = () => {
         <button
           className="m-1 px-3 bg-green-200 rounded-lg hover:bg-green-300"
           onClick={() => {
-            setListOfRestaurants(
+            setFilteredList(
               listOfRestaurants.filter((res) => res.info.avgRating >= 4.5)
             );
           }}

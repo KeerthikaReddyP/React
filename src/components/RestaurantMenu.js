@@ -20,15 +20,16 @@ const RestaurantMenu = () => {
           ?.card?.card?.categories[0];
 
   return (
-    <div>
-      <h1>{name}</h1>
-      <h3>
+    <div className="flex flex-col items-center m-2 p-4">
+      <h1 className="font-bold text-xl">{name}</h1>
+      <h3 className="m-2 p-2 text-sm">
         {cuisines.join(", ")} - {costForTwoMessage}
       </h3>
-      <ul>
+      <ul className="overflow-auto">
         {itemCards.map((item) => (
-          <li key={item.card.info.id}>
+          <li className="flex m-2 p-4 justify-between bg-gray-100" key={item.card.info.id}>
             {item.card.info.name} - Rs.{item.card.info.price / 100}
+            <div><button className="m-2 px-6 py-2 font-bold text-green-600 bg-white rounded-md">Add</button></div>
           </li>
         ))}
       </ul>
