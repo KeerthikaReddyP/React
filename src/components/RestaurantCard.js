@@ -6,7 +6,7 @@ const RestaurantCard = (props) => {
   const { deliveryTime } = resData.info.sla;
   return (
     <div className="m-2 p-2 w-60 hover:border border-solid border-black">
-      <img className="res-logo" src={CDN_URL + cloudinaryImageId} />
+      <img src={CDN_URL + cloudinaryImageId} />
       <div className="font-bold p-2">{name}</div>
       <div className="p-2">{cuisines.join(", ")}</div>
       <div className="flex justify-between p-2">
