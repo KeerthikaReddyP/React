@@ -5,30 +5,42 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
-  const onlineStatus=useOnlineStatus();
-  
+  const onlineStatus = useOnlineStatus();
+
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="flex p-4 justify-between">
+      <div className="">
+        <img className="w-32" src={LOGO_URL} />
       </div>
-      <div className="navbar">
-        <ul>
-          <li>{onlineStatus?"🟢":"🔴"}</li>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/about"}>About us</Link></li>
-          <li><Link to={"/contact"}>Contact us</Link></li>
-          <li><Link to={"/grocery"}>Grocery Store</Link></li>
-          <li>Cart</li>
+      <div className="">
+        <ul className="flex">
+          <li className="m-4 p-2 items-center">{onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="m-4 p-2 items-center">
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li className="m-4 p-2 items-center">
+            <Link to={"/about"}>About us</Link>
+          </li>
+          <li className="m-4 p-2 items-center">
+            <Link to={"/contact"}>Contact us</Link>
+          </li>
+          <li className="m-4 p-2 items-center">
+            <Link to={"/grocery"}>Grocery Store</Link>
+          </li>
+          <li className="m-4 p-2 items-center">Cart</li>
+          <li className="m-4 p-2 items-center bg-purple-200">
+            <button
+              className=""
+              onClick={() => {
+                btnText === "Login"
+                  ? setBtnText("Logout")
+                  : setBtnText("Login");
+              }}
+            >
+              {btnText}
+            </button>
+          </li>
         </ul>
-        <button
-          className="login-btn"
-          onClick={() => {
-            btnText === "Login" ? setBtnText("Logout") : setBtnText("Login");
-          }}
-        >
-          {btnText}
-        </button>
       </div>
     </div>
   );
