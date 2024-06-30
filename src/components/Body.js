@@ -44,7 +44,7 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
         ></input>
         <button
-          className="m-1 px-3 bg-green-200 rounded-lg hover:bg-green-300"
+          className="m-1 px-3 bg-green-200 rounded-md hover:bg-green-300"
           onClick={() =>
             setFilteredList(
               listOfRestaurants.filter((res) =>
