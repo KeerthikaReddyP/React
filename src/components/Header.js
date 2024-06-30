@@ -9,10 +9,10 @@ const Header = () => {
 
   return (
     <div className="flex p-4 justify-between">
-      <div className="">
+      <div>
         <img className="w-32" src={LOGO_URL} />
       </div>
-      <div className="">
+      <div>
         <ul className="flex">
           <li className="m-4 p-2 items-center">{onlineStatus ? "🟢" : "🔴"}</li>
           <li className="m-4 p-2 items-center">
@@ -30,7 +30,6 @@ const Header = () => {
           <li className="m-4 p-2 items-center">Cart</li>
           <li className="m-4 p-2 items-center bg-purple-200">
             <button
-              className=""
               onClick={() => {
                 btnText === "Login"
                   ? setBtnText("Logout")
