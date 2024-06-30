@@ -8,7 +8,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const Grocery = lazy(() => import("./components/Grocery"));
-const About=lazy(()=>import("./components/About"));
+const About = lazy(() => import("./components/About"));
 
 const AppComponent = () => {
   return (
@@ -30,7 +30,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <Suspense fallback={<h1>Wait...</h1>}><About /></Suspense>,
+        element: (
+          <Suspense fallback={<h1>Wait...</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
