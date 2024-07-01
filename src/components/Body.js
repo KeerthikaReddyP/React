@@ -67,14 +67,18 @@ const Body = () => {
         </button>
       </div>
       <div className="flex flex-wrap m-2 p-2 justify-center">
-        {filteredList.map((restaurant) => (
-          <Link
-            to={"/restaurants/" + restaurant.info.id}
-            key={restaurant.info.id}
-          >
-            <RestaurantCard resData={restaurant} />
-          </Link>
-        ))}
+        {filteredList.length == 0 ? (
+          <h1>No results found</h1>
+        ) : (
+          filteredList.map((restaurant) => (
+            <Link
+              to={"/restaurants/" + restaurant.info.id}
+              key={restaurant.info.id}
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );

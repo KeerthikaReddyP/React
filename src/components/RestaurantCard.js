@@ -10,7 +10,7 @@ const RestaurantCard = (props) => {
       <div className="font-bold p-2">{name}</div>
       <div className="p-2">{cuisines.join(", ")}</div>
       <div className="flex justify-between p-2">
-        <div><span className="text-white bg-green-400 rounded-xl px-1 pb-1">☆</span> {avgRating}</div>
+        <div className="text-white bg-green-400 px-1 text-sm">☆ {avgRating}</div>
         <div>{deliveryTime} minutes</div>
       </div>
     </div>
