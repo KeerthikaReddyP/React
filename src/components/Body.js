@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withOpenLabel } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_API_URL } from "../utils/constants";
@@ -11,6 +11,8 @@ const Body = () => {
   const [filteredList, setFilteredList] = useState([]);
 
   const onlineStatus = useOnlineStatus();
+
+  const RestaurantCardWithOpen = withOpenLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -32,6 +34,7 @@ const Body = () => {
 
   if (onlineStatus === false) return <h1>Here's the dino game.Please play.</h1>;
 
+  console.log(listOfRestaurants);
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -75,7 +78,11 @@ const Body = () => {
               to={"/restaurants/" + restaurant.info.id}
               key={restaurant.info.id}
             >
-              <RestaurantCard resData={restaurant} />
+              {restaurant.info.isOpen ? (
+                <RestaurantCardWithOpen resData={restaurant} />
+              ) : (
+                <RestaurantCard resData={restaurant} />
+              )}
             </Link>
           ))
         )}
