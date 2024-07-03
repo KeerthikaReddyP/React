@@ -34,7 +34,7 @@ const Body = () => {
 
   if (onlineStatus === false) return <h1>Here's the dino game.Please play.</h1>;
 
-  console.log(listOfRestaurants);
+  
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
