@@ -1,3 +1,5 @@
+import ItemList from "./ItemList";
+
 const RestaurantCategory = ({ data }) => {
   console.log(data);
   return (
@@ -6,6 +8,7 @@ const RestaurantCategory = ({ data }) => {
         <span className="font-bold text-md">{data.title} ({data.itemCards.length})</span>
         <span>🔽</span>
       </div>
+      <ItemList items={data?.itemCards}/>
     </div>
   );
 };
