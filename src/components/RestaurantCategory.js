@@ -4,7 +4,6 @@ import { useState } from "react";
 const RestaurantCategory = ({ data,showItems,setShowIndex}) => {
   
   function clickHandler(){
-    // setShowItems(!showItems);
     setShowIndex();
   }
   return (
