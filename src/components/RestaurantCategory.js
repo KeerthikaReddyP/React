@@ -1,12 +1,10 @@
 import ItemList from "./ItemList";
 import { useState } from "react";
 
-const RestaurantCategory = ({ data }) => {
-    
-    const [showItems,setShowItems]=useState(false);
+const RestaurantCategory = ({ data,showItems}) => {
   
   function clickHandler(){
-    setShowItems(!showItems);
+    // setShowItems(!showItems);
   }
   return (
     <div className="w-6/12 m-auto">
