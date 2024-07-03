@@ -10,7 +10,7 @@ const ItemList = ({ items }) => {
                 <span className="font-semibold text-md">₹ {item.card.info.price?item.card.info.price/100:item.card.info.defaultPrice/100}</span>
                 <p className="text-xs">{item.card.info.description}</p>
             </div>
-            <div className="w-3/12 flex flex-col items-center">
+            <div className="w-3/12 flex flex-col place-items-end">
                 <img className="w-16 h-14" src={RESTAURANT_MENU_ITEM_IMAGE_URL+item.card.info.imageId}/>
                 <button className="px-4 bg-white text-green-500 font-bold rounded-lg shadow-lg">ADD</button>
             </div>
