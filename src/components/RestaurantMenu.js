@@ -26,7 +26,12 @@ const RestaurantMenu = () => {
         {cuisines.join(", ")} - {costForTwoMessage}
       </h3>
       <div>
-        {itemCategories.map((category) => <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>)}
+        {itemCategories.map((category) => (
+          <RestaurantCategory
+            key={category?.card?.card?.title}
+            data={category?.card?.card}
+          />
+        ))}
       </div>
     </div>
   );
