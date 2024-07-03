@@ -11,8 +11,8 @@ const ItemList = ({ items }) => {
                 <p className="text-xs">{item.card.info.description}</p>
             </div>
             <div className="w-3/12 flex flex-col place-items-end">
-                <img className="w-16 h-14" src={RESTAURANT_MENU_ITEM_IMAGE_URL+item.card.info.imageId}/>
-                <button className="px-4 bg-white text-green-500 font-bold rounded-lg shadow-lg">ADD</button>
+                <img className="w-20 h-16" src={RESTAURANT_MENU_ITEM_IMAGE_URL+item.card.info.imageId}/>
+                <button className="px-4 bg-white text-green-600 font-bold rounded-lg shadow-lg">ADD</button>
             </div>
         </div>
       ))}
