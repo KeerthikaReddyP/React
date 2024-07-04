@@ -6,26 +6,29 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "./utils/UserContext";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
 
-const [userName, setUserName]=useState();
-
-useEffect(()=>{
-  //Assume this useEffect made an api call and received the data(username and password)
-  const data={
-    name:"Keerthika Reddy",
-  };
-  setUserName(data.name);
-},[]);
-
 const AppComponent = () => {
+  const [userName, setUserName] = useState("Dummy");
+
+  useEffect(() => {
+    //Assume this useEffect made an api call and received the data(username and password)
+    const data = {
+      name: "Keerthika Reddy",
+    };
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName }}>
+      <div>
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
