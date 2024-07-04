@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const onlineStatus = useOnlineStatus();
+
+  const data=useContext(UserContext);
+  console.log(data);
 
   return (
     <div className="flex justify-between shadow-md">
