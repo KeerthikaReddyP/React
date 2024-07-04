@@ -14,7 +14,7 @@ class About extends React.Component {
         <h3>We are from namaste React webseries</h3>
         <div>
             <UserContext.Consumer>
-                {(data)=>console.log(data)}
+                {({loggedInUser})=><div>LoggedInUser : {loggedInUser}</div>}
             </UserContext.Consumer>
         </div>
         <UserClass name={"Keerthika "} location={"Delhi"} />
