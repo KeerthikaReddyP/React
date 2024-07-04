@@ -11,7 +11,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredList, setFilteredList] = useState([]);
 
-  const {setUserName}=useContext(UserContext);
+  const {loggedInUser,setUserName}=useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
 
@@ -75,6 +75,8 @@ const Body = () => {
           <input
             className="border border-black m-2 p-1"
             placeholder="Enter user name"
+            value={loggedInUser}
+            onChange={(e)=>setUserName(e.target.value)}
           ></input>
         </label>
       </div>
