@@ -23,12 +23,14 @@ const AppComponent = () => {
   }, []);
 
   return (
-    <div>
-      <UserContext.Provider value={{ loggedInUser: userName }}>
-        <Header />
-      </UserContext.Provider>
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName }}>
+      <div>
+        <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}>
+          <Header />
+        </UserContext.Provider>
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
