@@ -34,7 +34,6 @@ const Body = () => {
 
   if (onlineStatus === false) return <h1>Here's the dino game.Please play.</h1>;
 
-  
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -68,6 +67,13 @@ const Body = () => {
         >
           Filter high rated restaurants
         </button>
+
+        <label>
+          <input
+            className="border border-black m-2 p-1"
+            placeholder="Enter user name"
+          ></input>
+        </label>
       </div>
       <div className="flex flex-wrap m-2 p-2 justify-center">
         {filteredList.length == 0 ? (
