@@ -60,6 +60,7 @@ const Body = () => {
         >
           Search
         </button>
+        
         <button
           className="m-1 px-3 bg-green-200 rounded-lg hover:bg-green-300"
           onClick={() => {
