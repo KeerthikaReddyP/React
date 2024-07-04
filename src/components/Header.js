@@ -8,8 +8,7 @@ const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
-  const data=useContext(UserContext);
-  console.log(data);
+  const {loggedInUser}=useContext(UserContext);
 
   return (
     <div className="flex justify-between shadow-md">
@@ -43,6 +42,7 @@ const Header = () => {
               {btnText}
             </button>
           </li>
+          <li className="m-4 p-2 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
