@@ -3,12 +3,16 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
   const {loggedInUser}=useContext(UserContext);
+
+  const cartItems=useSelector((store)=>store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="flex justify-between shadow-md">
