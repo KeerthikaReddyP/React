@@ -1,6 +1,9 @@
+import { useDispatch } from "react-redux";
 import { RESTAURANT_MENU_ITEM_IMAGE_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
+
+  const dispatch=useDispatch();
 
   const handleAddItem=()=>{
     console.log("Item added");
