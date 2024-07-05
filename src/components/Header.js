@@ -9,9 +9,9 @@ const Header = () => {
   const [btnText, setBtnText] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
-  const {loggedInUser}=useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
 
-  const cartItems=useSelector((store)=>store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between shadow-md">
@@ -33,7 +33,12 @@ const Header = () => {
           <li className="m-4 p-2 hover:text-orange-500">
             <Link to={"/grocery"}>Grocery Store</Link>
           </li>
-          <li className="m-4 p-2 font-semibold">Cart ({cartItems.length} items)</li>
+          <li className="relative m-4 p-1 font-semibold">
+            <span className="text-3xl">🛒</span>
+            <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 transform translate-x-1/2 -translate-y-1/2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
+              {cartItems.length}
+            </span>
+          </li>
           <li className="m-4 p-2 hover:text-orange-500">
             <button
               onClick={() => {
