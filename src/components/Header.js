@@ -12,7 +12,6 @@ const Header = () => {
   const {loggedInUser}=useContext(UserContext);
 
   const cartItems=useSelector((store)=>store.cart.items);
-  console.log(cartItems);
 
   return (
     <div className="flex justify-between shadow-md">
@@ -34,7 +33,7 @@ const Header = () => {
           <li className="m-4 p-2 hover:text-orange-500">
             <Link to={"/grocery"}>Grocery Store</Link>
           </li>
-          <li className="m-4 p-2 font-semibold">Cart (0 items)</li>
+          <li className="m-4 p-2 font-semibold">Cart ({cartItems.length} items)</li>
           <li className="m-4 p-2 hover:text-orange-500">
             <button
               onClick={() => {
