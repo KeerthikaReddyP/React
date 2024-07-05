@@ -1,6 +1,11 @@
 import { RESTAURANT_MENU_ITEM_IMAGE_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
+
+  const handleAddItem=()=>{
+    console.log("Item added");
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -25,7 +30,10 @@ const ItemList = ({ items }) => {
                 src={RESTAURANT_MENU_ITEM_IMAGE_URL + item.card.info.imageId}
               />
             )}
-            <button className="px-4 bg-white text-green-600 font-bold rounded-lg shadow-lg">
+            <button
+              className="px-4 bg-white text-green-600 font-bold rounded-lg shadow-lg"
+              onClick={handleAddItem}
+            >
               ADD
             </button>
           </div>
