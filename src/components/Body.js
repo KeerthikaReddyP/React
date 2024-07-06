@@ -1,7 +1,7 @@
 import RestaurantCard, { withOpenLabel } from "./RestaurantCard";
-import { useEffect, useState,useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
-import { SWIGGY_API_URL , PROXY} from "../utils/constants";
+import { SWIGGY_API_URL, PROXY } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -11,7 +11,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredList, setFilteredList] = useState([]);
 
-  const {loggedInUser,setUserName}=useContext(UserContext);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
 
@@ -22,7 +22,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(PROXY+SWIGGY_API_URL);
+    const data = await fetch(PROXY + SWIGGY_API_URL);
     const jsonData = await data.json();
 
     setListOfRestaurants(
@@ -60,7 +60,7 @@ const Body = () => {
         >
           Search
         </button>
-        
+
         <button
           className="m-1 px-3 bg-green-200 rounded-lg hover:bg-green-300"
           onClick={() => {
@@ -77,7 +77,7 @@ const Body = () => {
             className="border border-black m-2 p-1"
             placeholder="Enter user name"
             value={loggedInUser}
-            onChange={(e)=>setUserName(e.target.value)}
+            onChange={(e) => setUserName(e.target.value)}
           ></input>
         </label>
       </div>
