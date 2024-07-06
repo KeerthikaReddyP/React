@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import { RESTAURANT_MENU_URL } from "./constants";
+import { RESTAURANT_MENU_URL,PROXY } from "./constants";
 
 const useRestaurantMenu=(resId)=>{
     const [resInfo,setResInfo]=useState(null);
@@ -9,7 +9,7 @@ const useRestaurantMenu=(resId)=>{
     },[]);
 
     const fetchData=async ()=>{
-        const data=await fetch(RESTAURANT_MENU_URL+resId);
+        const data=await fetch(PROXY+RESTAURANT_MENU_URL+resId);
         const jsonData=await data.json();
 
         setResInfo(jsonData);

@@ -8,6 +8,8 @@ export default CDN_URL;
 export const SWIGGY_API_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.9692624&lng=79.59263039999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
+export const PROXY="https://thingproxy.freeboard.io/fetch/";
+
 export const RESTAURANT_MENU_URL =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.9692624&lng=79.59263039999999&restaurantId=";
 
