@@ -14,18 +14,20 @@ describe("Contact page's test cases",()=>{
         expect(heading).toBeInTheDocument();
     });
     
-    test("Contact page should have a button",()=>{
-        render(<Contact />);
-    
-        const button=screen.getByRole("button");
-    
-        expect(button).toBeInTheDocument();
-    });
-    
-    test("Contact page should have the test submit",()=>{
-        render(<Contact />);
-        const submitText=screen.getByText("Submit");
-        expect(submitText).toBeInTheDocument();
+    describe("button",()=>{
+        test("Contact page should have a button",()=>{
+            render(<Contact />);
+        
+            const button=screen.getByRole("button");
+        
+            expect(button).toBeInTheDocument();
+        });
+        
+        test("Contact page should have the test submit",()=>{
+            render(<Contact />);
+            const submitText=screen.getByText("Submit");
+            expect(submitText).toBeInTheDocument();
+        });
     });
     
     test("Contact page should have two input boxes",()=>{
