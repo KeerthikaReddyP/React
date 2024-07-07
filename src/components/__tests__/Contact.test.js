@@ -12,3 +12,17 @@ test("Contact component should load",()=>{
     //Assertion
     expect(heading).toBeInTheDocument();
 });
+
+test("Contact page should have a button",()=>{
+    render(<Contact />);
+
+    const button=screen.getByRole("button");
+
+    expect(button).toBeInTheDocument();
+});
+
+test("Contact page should have the test submit",()=>{
+    render(<Contact />);
+    const submitText=screen.getByText("Submit");
+    expect(submitText).toBeInTheDocument();
+});
