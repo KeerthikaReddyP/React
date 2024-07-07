@@ -42,7 +42,21 @@ it("should render header with Cart", () => {
     </BrowserRouter>
   );
 
-  const cart=screen.getByText("🛒");
+  const cart = screen.getByText("🛒");
 
   expect(cart).toBeInTheDocument();
+});
+
+it("should render header with Contact text", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const contact = screen.getByText(/Contact/);
+
+  expect(contact).toBeInTheDocument();
 });
