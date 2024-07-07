@@ -3,7 +3,7 @@ import Contact from "../Contact";
 import "@testing-library/jest-dom";
 
 describe("Contact page's test cases",()=>{
-    test("Contact component should load",()=>{
+    it("Contact component should load",()=>{
         //Rendering component onto jsdom
         render(<Contact />);
     
@@ -15,7 +15,7 @@ describe("Contact page's test cases",()=>{
     });
     
     describe("button",()=>{
-        test("Contact page should have a button",()=>{
+        it("Contact page should have a button",()=>{
             render(<Contact />);
         
             const button=screen.getByRole("button");
@@ -23,7 +23,7 @@ describe("Contact page's test cases",()=>{
             expect(button).toBeInTheDocument();
         });
         
-        test("Contact page should have the test submit",()=>{
+        it("Contact page should have the test submit",()=>{
             render(<Contact />);
             const submitText=screen.getByText("Submit");
             expect(submitText).toBeInTheDocument();
