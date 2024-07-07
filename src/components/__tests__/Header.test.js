@@ -1,4 +1,4 @@
-const { render,screen } = require("@testing-library/react");
+const { render, screen } = require("@testing-library/react");
 import Header from "../Header";
 import { Provider } from "react-redux";
 import appStore from "../../utils/appStore";
@@ -14,7 +14,21 @@ it("should render Header component", () => {
     </BrowserRouter>
   );
 
-  const loginButton=screen.getByRole("button");
+  const loginButton = screen.getByRole("button");
+
+  expect(loginButton).toBeInTheDocument();
+});
+
+it("should render Header component with Login button", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const loginButton = screen.getByRole("button", { name: "Login" });
 
   expect(loginButton).toBeInTheDocument();
 });
