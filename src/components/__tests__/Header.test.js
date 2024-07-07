@@ -1,4 +1,4 @@
-const { render, screen } = require("@testing-library/react");
+const { render, screen, fireEvent } = require("@testing-library/react");
 import Header from "../Header";
 import { Provider } from "react-redux";
 import appStore from "../../utils/appStore";
@@ -59,4 +59,22 @@ it("should render header with Contact text", () => {
   const contact = screen.getByText(/Contact/);
 
   expect(contact).toBeInTheDocument();
+});
+
+it("should change Login button to Logout on click", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const loginButton = screen.getByRole("button", { name: "Login" });
+
+  fireEvent.click(loginButton);
+
+  const logoutButton=screen.getByRole("button",{name:"Logout"});
+
+  expect(logoutButton).toBeInTheDocument();
 });
