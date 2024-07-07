@@ -33,7 +33,7 @@ test("Contact page should have two input boxes",()=>{
 
     //Querying
     const inputBoxes=screen.getAllByRole("textbox");
-    console.log(inputBoxes.length);
+    console.log(inputBoxes);
 
     //Assertion
     // expect(inputBoxes.length).toBe(2);
