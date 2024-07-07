@@ -32,3 +32,17 @@ it("should render Header component with Login button", () => {
 
   expect(loginButton).toBeInTheDocument();
 });
+
+it("should render header with Cart", () => {
+  render(
+    <BrowserRouter>
+      <Provider store={appStore}>
+        <Header />
+      </Provider>
+    </BrowserRouter>
+  );
+
+  const cart=screen.getByText("🛒");
+
+  expect(cart).toBeInTheDocument();
+});
