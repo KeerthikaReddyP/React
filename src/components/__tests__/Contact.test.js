@@ -26,3 +26,14 @@ test("Contact page should have the test submit",()=>{
     const submitText=screen.getByText("Submit");
     expect(submitText).toBeInTheDocument();
 });
+
+test("Contact page should have two input boxes",()=>{
+    //Rendering
+    render(<Contact />);
+
+    //Querying
+    const inputBoxes=screen.getAllByRole("textbox");
+
+    //Assertion
+    expect(inputBoxes.length).toBe(2);
+});
