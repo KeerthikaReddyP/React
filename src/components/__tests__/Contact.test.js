@@ -30,7 +30,7 @@ describe("Contact page's test cases",()=>{
         });
     });
     
-    test("Contact page should have two input boxes",()=>{
+    it("Contact page should have two input boxes",()=>{
         //Rendering
         render(<Contact />);
     
