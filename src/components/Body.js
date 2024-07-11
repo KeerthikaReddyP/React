@@ -1,7 +1,7 @@
 import RestaurantCard, { withOpenLabel } from "./RestaurantCard";
 import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
-import { SWIGGY_API_URL, PROXY } from "../utils/constants";
+import { SWIGGY_API_URL} from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -22,7 +22,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(PROXY + SWIGGY_API_URL);
+    const data = await fetch(SWIGGY_API_URL);
     const jsonData = await data.json();
 
     setListOfRestaurants(
@@ -36,6 +36,8 @@ const Body = () => {
   };
 
   if (onlineStatus === false) return <h1>Here's the dino game.Please play.</h1>;
+
+  if(!listOfRestaurants) return null;
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
